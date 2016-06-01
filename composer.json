@@ -11,10 +11,18 @@
             "homepage": "http://ma.rtyn.biz/"
         }
     ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "url": "https://github.com/martynbiz/PHP-View.git",
+            "type": "git"
+        }
+    ],
     "require": {
         "php": ">=5.5.0",
         "slim/slim": "^3.1",
-        "slim/php-view": "^2.0",
+        "slim/php-view": "dev-master",
         "monolog/monolog": "^1.17",
         "martynbiz/slim3-module": "dev-master"
     }
