@@ -1,20 +1,21 @@
 {
-    "name": "slim/slim-skeleton",
-    "description": "A Slim Framework skeleton application for rapid development",
-    "keywords": ["microframework","rest","router", "psr7"],
-    "homepage": "http://github.com/slimphp/Slim-Skeleton",
+    "name": "martynbiz/slim3-module-skeleton",
+    "description": "A Slim Framework skeleton application with modules for rapid development",
+    "keywords": ["microframework","rest","router","psr7","modules"],
+    "homepage": "http://github.com/martynbiz/slim3-module-skeleton",
     "license": "MIT",
     "authors": [
         {
-            "name": "Josh Lockhart",
-            "email": "info@joshlockhart.com",
-            "homepage": "http://www.joshlockhart.com/"
+            "name": "Martyn Bissett",
+            "email": "martynbissett@yahoo.com",
+            "homepage": "http://ma.rtyn.biz/"
         }
     ],
     "require": {
         "php": ">=5.5.0",
         "slim/slim": "^3.1",
         "slim/php-view": "^2.0",
-        "monolog/monolog": "^1.17"
+        "monolog/monolog": "^1.17",
+        "martynbiz/slim3-module": "dev-master"
     }
 }

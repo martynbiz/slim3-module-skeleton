@@ -8,7 +8,7 @@ if (PHP_SAPI == 'cli-server') {
     }
 }
 
-require __DIR__ . '/../vendor/autoload.php';
+$classLoader = __DIR__ . '/../vendor/autoload.php';
 
 session_start();
 
@@ -16,14 +16,12 @@ session_start();
 $settings = require __DIR__ . '/../src/settings.php';
 $app = new \Slim\App($settings);
 
-// Set up dependencies
-require __DIR__ . '/../src/dependencies.php';
-
-// Register middleware
-require __DIR__ . '/../src/middleware.php';
-
-// Register routes
-require __DIR__ . '/../src/routes.php';
+$module = new \MartynBiz\Slim3Module\Module($classLoader, $app, [
+    'autoload' => [ // <--- list of modules to autoload
+        'hello',
+    ],
+    'modules_path' => '/path/to/modules',
+]);
 
 // Run app
 $app->run();
